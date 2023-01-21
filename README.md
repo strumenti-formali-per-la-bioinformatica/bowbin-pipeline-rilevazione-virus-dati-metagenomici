@@ -20,7 +20,13 @@ Inoltre la pipeline prevede un ulteriore step di binning. In questa fase, partic
 
 
 ## Installazione
+Per usare la pipeline è possibile clonare il repository
 
+`git clone https://github.com/strumenti-formali-per-la-bioinformatica/bowbin-pipeline-rilevazione-virus-dati-metagenomici`
+
+e aggiungere la cartella `scripts` nella variabile d'ambianete `PATH`. 
+
+Inoltre bisogna installare i tool elencati nella sezione successiva.
 ## Requisiti
 La pipeline è stata realizzata e testata utilizzando i tool elencati di seguito. Si consiglia di utilizzare le versioni indicate per evitare problemi di compatibilità.
 - [Python3](https://www.python.org/) (versione 3.9.13)
@@ -33,6 +39,7 @@ La pipeline è stata realizzata e testata utilizzando i tool elencati di seguito
 - [BinSanity](https://github.com/edgraham/BinSanity)
 
 Per facilitare l'installazione dei tools si consiglia l'utilizzo di [bioconda](https://anaconda.org/bioconda). Di seguito la guida di installazione. 
+
 ## Esecuzione di BowBin
 
 ## Spiegazione output
