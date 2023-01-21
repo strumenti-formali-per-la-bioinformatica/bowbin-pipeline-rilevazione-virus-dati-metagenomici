@@ -22,7 +22,17 @@ Inoltre la pipeline prevede un ulteriore step di binning. In questa fase, partic
 ## Installazione
 
 ## Requisiti
+La pipeline è stata realizzata e testata utilizzando i tool elencati di seguito. Si consiglia di utilizzare le versioni indicate per evitare problemi di compatibilità.
+- [Python3](https://www.python.org/) (versione 3.9.13)
+- [Bowtie2](https://bowtie-bio.sourceforge.net/bowtie2/index.shtml) (versione 2.2.5)
+  - Compilatore: gcc version 9.3.0
+- [Samtools](http://www.htslib.org/) (versione 1.6)
+  - Versione htslib: 1.6
+- [MetaBat2](https://bitbucket.org/berkeleylab/metabat/src/master/) (versione 2.15)
+- [vRhyme](https://github.com/AnantharamanLab/vRhyme)
+- [BinSanity](https://github.com/edgraham/BinSanity)
 
+Per facilitare l'installazione dei tools si consiglia l'utilizzo di [bioconda](https://anaconda.org/bioconda). Di seguito la guida di installazione. 
 ## Esecuzione di BowBin
 
 ## Spiegazione output
