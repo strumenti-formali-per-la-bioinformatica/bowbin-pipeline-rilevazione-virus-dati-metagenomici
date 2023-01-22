@@ -77,13 +77,26 @@ Creazione della coverage table:
 - `jgi_summarize_bam_contig_depths --outputDepth depth.txt risultatiAllineamento.sort.bam`
 
 Trasformazione della coverage table:
-- `python3 scripts/coverage_table_convert.py -i depth.txt -o coverage_table.tsv -multiplyAvg 900 -multiplyStdev 150`
+- `python3 scripts/coverage_table_convert.py -i depth.txt -o coverage_table.tsv -multiplyAvg 900 -multiplyStdev 150`.
    
+  Al file `coverage_table_convert-py` di `vRhyme` è stato aggiunto il flag `-multiplyAvg` che moltiplica la media presente nella coverage table per il valore indicato, e il flag `-multuplyStdev` che moltiplica la deviazione standard presente nella coverage table per il valore indicato. I valori di questi due flag dipendono dai dati in input e dal processo di binning. 
 
+Rimozione delle righe con media pari a zero dalla coverage table:
+- `python3 scripts/remove_rows_tsv.py coverage_table.tsv`
 ### Binning
+Per eseguire il binning con vRhyme:
+- `vRhyme -i scaffolds.fasta -o resultsvRhyme/ -c coverage_table.tsv -t 2`
+
+Per eseguire il binning con BinSanity:
+- `python3 scripts/generate_lognorm.py coverage_table.tsv`
+  L'esecuzione dello script `generate_lognorm.py` rimuove l'intestazione della coverage table e aggiunge `.lognorm` al nome del file.
+- `Binsanity -f . -l scaffolds.fasta -p -10 -c coverage_table.tsv.lognorm -o resultsBinsanity/`
+
 ### Dati in output
-
-
+BowBin produce i seguenti file in output:
+- *coverage_table.tsv*: in questa tabella vengono riportati gli scaffolds trovati nei dati metagenomici con la relativa media e deviazione standard
+- *resultsvRhyme/*: in questa cartella vengono riportati i risultati del binning effettuato da vRhyme. I bin, con gli scaffolds contenuti, vengono riportati nel file *vRhyme_best_bins.#.membership.tsv*
+- *resultsBinsanity/*: in questa cartella vengono riportati i risultati del binning effettuato da BinSanity. Ogni bin prodotto avrà il proprio file `.fna` con all'interno gli scaffolds. 
 ## File e cartelle
 
 ## Autori
