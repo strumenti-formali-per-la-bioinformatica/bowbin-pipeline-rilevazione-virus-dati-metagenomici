@@ -46,6 +46,7 @@ Per facilitare l'installazione dei tools si consiglia l'utilizzo di [anaconda](h
 Di seguito i passi per l'installazione dei tools: 
 1. Creare un nuovo ambiente con python `conda create -n BowBin python=3.9`
 2. Installare Bowtie2 `conda install -c bioconda bowtie2=2.2.5`
+   NOTA: in caso di errori dovuti a `libgcc-ng` o a `glibc`, si può utilizzare il comando `sudo apt install bowtie2`
 3. Installare Samtools `conda install -c bioconda samtools=1.6`
 4. Installare MetaBat2 `conda install -c bioconda metabat2=2.15`
 5. Per installare Binsanity: [https://github.com/edgraham/BinSanity/wiki/Installation](https://github.com/edgraham/BinSanity/wiki/Installation)
