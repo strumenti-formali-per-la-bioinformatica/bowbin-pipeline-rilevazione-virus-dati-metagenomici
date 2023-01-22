@@ -1,9 +1,3 @@
-#!/usr/bin/python3
-# vRhyme
-# Author: Kristopher Kieft
-# University of Wisconsin-Madison
-
-
 import argparse
 import os
 import sys
