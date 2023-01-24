@@ -59,11 +59,14 @@ Di seguito si riportano i passaggi per l'esecuzione di BowBin sui dati contenuti
 ### Dati in input
 La pipeline prende in input i dati metagenomici `example/metagenomics.fasta` e un insieme di genomi virali `example/genomes.fasta`
 ### Rilevazione dei virus
+Per evitare errori dovuti alla versione di Bowtie2, si può sostituire il simbolo `@` con il simbolo `>` nei dati metagenomici con il seguente script:
+- `python3 scripts/remove_at.py metagenomics_withAt.fasta metagenomics.fasta`
+
 Dividere i genomi virali in scaffolds: 
 - `python3 scripts/split.py genomes.fasta scaffolds.fasta 218`. Il primo parametro di `split.py` è il file in input che contiene i genomi virali, il seconda parametro indica il nome del file di output, l'ultimo parametro indica la lunghezza dello scaffold espresso in numero di righe.
 
 Creazione dell'indice Bowtie2 usando il file che contiene gli scaffolds:
-- `bowtie2 -build scaffolds.fasta indiceScaffolds`
+- `bowtie2-build scaffolds.fasta indiceScaffolds`
 
 Allineamento degli scaffolds con i dati metagenomici `example/metagenomics.fasta`:
 - `bowtie2 --no-unal --no-discordant -f -x indiceScaffolds -U metagenomics.fasta -S risultatiAllineamento.sam`
@@ -98,6 +101,9 @@ BowBin produce i seguenti file in output:
 - *coverage_table.tsv*: in questa tabella vengono riportati gli scaffolds trovati nei dati metagenomici con la relativa media e deviazione standard
 - *resultsvRhyme/*: in questa cartella vengono riportati i risultati del binning effettuato da vRhyme. I bin, con gli scaffolds contenuti, vengono riportati nel file *vRhyme_best_bins.#.membership.tsv*
 - *resultsBinsanity/*: in questa cartella vengono riportati i risultati del binning effettuato da BinSanity. Ogni bin prodotto avrà il proprio file `.fna` con all'interno gli scaffolds. 
+
+I file presenti nella cartella `output` sono stati prodotti dall'esecuzione di BowBin sui dati `example/genomes.fasta` e `example/metagenomics_withAt.fasta`. Dalla coverage table di può notare la presenza del virus con codice `NC_052974.1` e cioè *Achromobacter phage vB_AchrS_AchV4*. Il processo di binning invece non ha prodotto nessun bin, questo è dovuto ai pochi dati di esempio, dei bin eseguiti su dati reali si possono trovare nella cartella `example/ERR5084065_67_69_70`.
+
 ## File e cartelle
 
 ## Autori

@@ -1,0 +1,36 @@
+Command:  /home/nik/.local/bin/vRhyme -i scaffolds.fasta -o resultsvRhyme/ -c cov.tsv -t 2
+
+Date:     2023-01-24 (y-m-d)
+Start:    10:41:25   (h:m:s)
+Program:  vRhyme v1.1.0
+
+
+Time (min) |  Log                                                   
+--------------------------------------------------------------------
+0.0           Initializing and validating vRhyme parameters
+0.05          Performing pairwise coverage comparisons
+0.05          vRhyme binning complete
+
+Memory usage:       0.19
+Runtime (min):      0.05
+Bins generated:     0
+Binned sequences:   0 (0%)
+Input sequences:    5978
+Binned proteins:    0
+Redundant proteins: 0 (0%)
+Best iteration:     none
+vRhyme score:       none
+
+
+______________________________________________________________________
+
+             ## ## ## ##                                              
+             ##       ##  ##      ##     ##    ## ## ##     # ## ##   
+##       ##  ##       ##  ##       ##    ##  ##   ##   ##  ##      #  
+ ##     ##   ##     ##    ##         ## ##   ##   ##   ##  ## ## ##   
+  ##   ##    ## ####      ## ## ##     ##    ##   ##   ##  ##         
+   ## ##     ##   ##      ##    ##    ##     ##   ##   ##  ##         
+    ###      ##     ##    ##    ##   ##      ##   ##   ##   ## ## ##  
+______________________________________________________________________
+
+
