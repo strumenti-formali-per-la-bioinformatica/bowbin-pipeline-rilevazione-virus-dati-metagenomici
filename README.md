@@ -108,5 +108,17 @@ I file presenti nella cartella `output` sono stati prodotti dall'esecuzione di B
 - [deliverables](https://github.com/strumenti-formali-per-la-bioinformatica/bowbin-pipeline-rilevazione-virus-dati-metagenomici/tree/main/deliverables) contiene i file utili alla valutazione della pipeline
   - [confrontoGenomeDetectiveBowBin](https://github.com/strumenti-formali-per-la-bioinformatica/bowbin-pipeline-rilevazione-virus-dati-metagenomici/tree/main/deliverables/confrontoGenomeDetectiveBowBin) in questa cartella sono presenti i PDF che descrivono il confronto effettuato tra i risultati di BowBin e di Genome Detective eseguiti sui dati metagenomici [ERR5084065](https://www.ncbi.nlm.nih.gov/sra/?term=err5084065), [ERR5084067](https://www.ncbi.nlm.nih.gov/sra/?term=err5084067), [ERR5084069](https://www.ncbi.nlm.nih.gov/sra/?term=err5084069), [ERR5084070](https://www.ncbi.nlm.nih.gov/sra/?term=err5084070)
   - [ERR5084065_67_69_70](https://github.com/strumenti-formali-per-la-bioinformatica/bowbin-pipeline-rilevazione-virus-dati-metagenomici/tree/main/deliverables/ERR5084065_67_69_70) contiene i risultati di vRhyme, BinSanity e la coverage table prodotta dalla pipeline. Per effettuare il download dei dati metagenomici: [ERR5084065](https://www.ncbi.nlm.nih.gov/sra/?term=err5084065), [ERR5084067](https://www.ncbi.nlm.nih.gov/sra/?term=err5084067), [ERR5084069](https://www.ncbi.nlm.nih.gov/sra/?term=err5084069), [ERR5084070](https://www.ncbi.nlm.nih.gov/sra/?term=err5084070). Il file `allScaffolds.fasta.gz` contiene gli scaffolds utilizzati per analizzare i dati metagenomici.
+  - [risultatiBinSanity](https://github.com/strumenti-formali-per-la-bioinformatica/bowbin-pipeline-rilevazione-virus-dati-metagenomici/tree/main/deliverables/risultatiBinSanity) contiene i PDF che descrivono il binning effettuato da BinSanity
+- [example](https://github.com/strumenti-formali-per-la-bioinformatica/bowbin-pipeline-rilevazione-virus-dati-metagenomici/tree/main/example) contiene dei file di esempio con cui è possibile testare BowBin
+  - [output](https://github.com/strumenti-formali-per-la-bioinformatica/bowbin-pipeline-rilevazione-virus-dati-metagenomici/tree/main/example/output) contiene la coverage_table e i risultati di vRhyme e BinSanity ottenuti dai file `genomes.fasta` e `metagenomics_withAt.fasta`
+  - *genomes.fasta* contiene dei genomi virali completi
+  - *metagenomics_withAt.fasta* contiene delle reads metagenomiche
+- [scripts](https://github.com/strumenti-formali-per-la-bioinformatica/bowbin-pipeline-rilevazione-virus-dati-metagenomici/tree/main/scripts) contiene gli script python necessari per l'esecuzione di BowBin
+  - *coverage_table_convert.py*: modifica la coverage table salvata nel file depth.txt (prodotto da `jgi_summarize_bam_contig_depths`), questo script è stato prelevato dal tool vRhyme e sono stati aggiunti i due flag `-multiplyAvg` e `-multiplyStdev`
+  - *generate_lognorm.py*: rimuove l'intestazione del file tsv e aggiunge `.lognorm` al nome del file
+  - *remove_at.py*: sostituisce `@` con `>` all'interno del file metagenomico
+  - *remove_rows_tsv.py*: rimuove gli scaffolds con media pari a zero dalla coverage table
+  - *split.py*: divide i genomi virali in scaffolds
 ## Autori
 [Alessando Aquino](https://github.com/AlessandroUnisa), [Nicolapio Gagliarde](https://github.com/GagliardeNicolapio/)
+Contatti: a.aquino33@studenti.unisa.it, n.gagliarde@studenti.unisa.it
