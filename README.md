@@ -102,7 +102,7 @@ BowBin produce i seguenti file in output:
 - *resultsvRhyme/*: in questa cartella vengono riportati i risultati del binning effettuato da vRhyme. I bin, con gli scaffolds contenuti, vengono riportati nel file *vRhyme_best_bins.#.membership.tsv*
 - *resultsBinsanity/*: in questa cartella vengono riportati i risultati del binning effettuato da BinSanity. Ogni bin prodotto avrà il proprio file `.fna` con all'interno gli scaffolds. 
 
-I file presenti nella cartella `output` sono stati prodotti dall'esecuzione di BowBin sui dati `example/genomes.fasta` e `example/metagenomics_withAt.fasta`. Dalla coverage table di può notare la presenza del virus con codice `NC_052974.1` e cioè *Achromobacter phage vB_AchrS_AchV4*. Il processo di binning invece non ha prodotto nessun bin, questo è dovuto ai pochi dati di esempio, dei bin eseguiti su dati reali si possono trovare nella cartella `example/ERR5084065_67_69_70`.
+I file presenti nella cartella `output` sono stati prodotti dall'esecuzione di BowBin sui dati `example/genomes.fasta` e `example/metagenomics_withAt.fasta`. Dalla coverage table di può notare la presenza del virus con codice `NC_052974.1` e cioè *Achromobacter phage vB_AchrS_AchV4*. Il processo di binning invece non ha prodotto nessun bin, questo è dovuto ai pochi dati di esempio, dei bin eseguiti su dati reali si possono trovare nella cartella `deliverables/ERR5084065_67_69_70`.
 
 ## File e cartelle
 

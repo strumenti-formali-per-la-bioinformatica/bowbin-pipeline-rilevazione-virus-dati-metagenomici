@@ -1,0 +1,103 @@
+
+        ******************************************************
+        **********************BinSanity***********************
+        |____________________________________________________|
+        |                                                    |
+        |             Computing Coverage Array               |
+        |____________________________________________________|
+        
+          Preference: -10.0
+          Maximum Iterations: 4000
+          Convergence Iterations: 400
+          Contig Cut-Off: 1000
+          Damping Factor: 0.95
+          Coverage File: cov.tsv.lognorm
+          Fasta File: allScaffolds.fasta
+          Output directory: resultsBinsanity/
+          logfile: binsanity-logfile.txt
+          (128, 2)
+
+         ______________________________________________________
+        |                                                      |
+        |                 Clustering Contigs                   |
+        |______________________________________________________|
+
+        
+          Cluster 0: 1
+          Cluster 1: 1
+          Cluster 2: 1
+          Cluster 3: 1
+          Cluster 4: 1
+          Cluster 5: 1
+          Cluster 6: 1
+          Cluster 35: 29
+          Cluster 7: 1
+          Cluster 8: 1
+          Cluster 37: 14
+          Cluster 9: 1
+          Cluster 10: 2
+          Cluster 39: 2
+          Cluster 11: 2
+          Cluster 12: 1
+          Cluster 13: 1
+          Cluster 14: 1
+          Cluster 15: 1
+          Cluster 16: 1
+          Cluster 17: 1
+          Cluster 18: 1
+          Cluster 19: 1
+          Cluster 20: 1
+          Cluster 21: 1
+          Cluster 22: 1
+          Cluster 23: 1
+          Cluster 24: 1
+          Cluster 25: 1
+          Cluster 26: 1
+          Cluster 27: 1
+          Cluster 63: 2
+          Cluster 28: 1
+          Cluster 29: 1
+          Cluster 30: 1
+          Cluster 31: 2
+          Cluster 56: 3
+          Cluster 36: 2
+          Cluster 32: 3
+          Cluster 33: 4
+          Cluster 34: 3
+          Cluster 38: 1
+          Cluster 40: 2
+          Cluster 41: 1
+          Cluster 42: 1
+          Cluster 43: 1
+          Cluster 44: 2
+          Cluster 45: 1
+          Cluster 46: 1
+          Cluster 47: 1
+          Cluster 48: 1
+          Cluster 49: 1
+          Cluster 50: 1
+          Cluster 51: 1
+          Cluster 52: 1
+          Cluster 53: 1
+          Cluster 54: 1
+          Cluster 55: 1
+          Cluster 57: 1
+          Cluster 58: 1
+          Cluster 59: 1
+          Cluster 60: 1
+          Cluster 61: 1
+          Cluster 62: 1
+          Cluster 64: 1
+          Cluster 65: 1
+          Cluster 66: 1
+          Cluster 67: 1
+          Cluster 68: 1
+          Cluster 69: 1
+          Total Number of Bins: 2
+
+
+         _____________________________________________________
+
+                       Putative Bins Computed
+                       in 4.011797666549683 seconds
+         _____________________________________________________
