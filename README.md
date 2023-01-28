@@ -60,10 +60,10 @@ Di seguito si riportano i passaggi per l'esecuzione di BowBin sui dati contenuti
 La pipeline prende in input i dati metagenomici `example/metagenomics.fasta` e un insieme di genomi virali `example/genomes.fasta`
 ### Rilevazione dei virus
 Per evitare errori dovuti alla versione di Bowtie2, si può sostituire il simbolo `@` con il simbolo `>` nei dati metagenomici con il seguente script:
-- `python3 scripts/remove_at.py metagenomics_withAt.fasta metagenomics.fasta`
+- `python3 scripts/remove_at.py example/metagenomics_withAt.fasta metagenomics.fasta`
 
 Dividere i genomi virali in scaffolds: 
-- `python3 scripts/split.py genomes.fasta scaffolds.fasta 218`. Il primo parametro di `split.py` è il file in input che contiene i genomi virali, il seconda parametro indica il nome del file di output, l'ultimo parametro indica la lunghezza dello scaffold espresso in numero di righe.
+- `python3 scripts/split.py example/genomes.fasta scaffolds.fasta 218`. Il primo parametro di `split.py` è il file in input che contiene i genomi virali, il seconda parametro indica il nome del file di output, l'ultimo parametro indica la lunghezza dello scaffold espresso in numero di righe.
 
 Creazione dell'indice Bowtie2 usando il file che contiene gli scaffolds:
 - `bowtie2-build scaffolds.fasta indiceScaffolds`
